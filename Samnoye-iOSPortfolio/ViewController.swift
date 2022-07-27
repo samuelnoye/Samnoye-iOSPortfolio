@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         }
         webView.load(URLRequest(url: url))
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
             self.webView.evaluateJavaScript("document.body.innerHTML"){
                 result, error in
                 guard let html = result as? String, error == nil else{
